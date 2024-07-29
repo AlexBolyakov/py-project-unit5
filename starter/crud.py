@@ -35,6 +35,14 @@ def create_ratings(user, movie, score):
 
     return rating
 
+# def get_rating(score):
+#     return Rating.query.get(score)
+
+def get_user_by_email(email):
+    return User.query.filter(User.email == email).first()
+
+
+
 
 if __name__ == '__main__':
     from server import app
